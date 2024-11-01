@@ -23,7 +23,7 @@
 
 ### 1. **Implementation of Factory Method Pattern**
 
-The Factory Method pattern is used to create mobile phones of different brands. 
+The Factory Method pattern is used to create mobile phones of different brands. I have created 2 brands Samsung and Iphone, the factory can create phones of these brands.
 
 1. **Mobile Factory Interface**
     
@@ -110,6 +110,7 @@ The Factory Method pattern is used to create mobile phones of different brands.
 ### 2. **Implementation of Abstract Factory Pattern**
 
 The Abstract Factory Pattern provides a way to create families of related or dependent objects without specifying their concrete classes. This pattern involves creating a set of related factories, which can create objects that are part of a family. This helps manage and encapsulate the instantiation process for groups of related objects.
+In the code I provided , the Samsung and Iphone factories create only phones, but it can be extended to create laptops, headphones an other types of products.
 
 1. **IMobileFactory Interface**
     The `IMobileFactory` interface defines a contract for creating mobile factory instances based on the provided type.
@@ -154,6 +155,7 @@ The Abstract Factory Pattern provides a way to create families of related or dep
 ### 3. **Implementation of Builder Pattern**
 
 The Builder pattern is used to build a complex object, a `Meal`, in steps. Each builder focuses on creating specific parts of the meal, while the `MealDirector` directs the construction process.
+The buider can take different parts to create the meal.
 
 1. **MealBuilder Interface**
     The `MealBuilder` interface defines methods to set up each part of a meal (starter, main course, dessert) and a method to return the final meal.
@@ -246,3 +248,10 @@ Iphone camera capacity starts from 10 MP
 Requested meal is :Meal [starter=Korean Starter, mainCourse=Korean MainCourse, desserts=Korean Desserts]
 ```
 
+### Conclusion
+```
+By implementing these creational design patterns, I have learned how to impliment them. Through using the Factory Method I can create an instance out of several relted derived clases. I learned how to encapsulate the creatioin logic, making it easy to introduce new types, I can introduce more brans like Sony or Lenovo and also create different models for the phones. My subclasses can differ significantl, but share a common interface.
+Through using the Abstract Factory method, I created a family of related objects(mobile phones) without specifying the concrete object. Through it I can add other objects produced by the ConcreteFactories as headphones, laptops, tablets,etc. It has a higher level of abstraction than the Factory Method for creating families of related objects. When dealing with a variety of related products it will allow for scalability (I can add new families of objects without big changes in the code).
+Using Builder Pattern, allowed me to create a separated object construction from its reprezenttion. Through the same construction process, my code creates meals with different configurations by using the same building steps. I can use it when the object being created is simple, not complex. In my project, by changing the builder class, you can create variations of an object. 
+In conclusion, through these patterns, I learned how to make the code more modular, flexible, and easier to maintain. Each pattern tries to solve a different problem, demonstrating how design patterns can contribute to scalable and robust architecture in code.
+```
